@@ -2,12 +2,15 @@
 <html>
 <head>
     <title> Begin </title>
-    //comment
+  
 </head>
 <body>
 <?php
-
+  //comment
 echo "Wie geht es dir?";
+$x = 5 /* + 15 */ + 5;
+echo $x;
+
 ?>
 </body>
 </html>
