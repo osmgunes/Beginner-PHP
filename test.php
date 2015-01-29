@@ -2,6 +2,7 @@
 <html>
 <head>
     <title> Begin </title>
+    //comment
 </head>
 <body>
 <?php
