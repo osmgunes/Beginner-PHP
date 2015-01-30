@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Contact Us</title>
+
+	<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<header>
+	<h1>Contact Us</h1>
+	<p>For more information, contact us!</p>
+</header>
+
+<!-- Contact Form Section -->
+<section id="form">
+<form method="POST" action="">
+	<!-- First Name -->
+	<label>First Name:</label><br/>
+	<input name="FirstName" type="text" autofocus required><br/><br/>	
+
+	<!-- Middle Name -->
+	<label>Middle Name:</label><br/>
+	<input name="FirstName" type="text" disabled><br/><br/>	
+
+	<!-- Last Name -->
+	<label>Last Name:</label><br/>
+	<input name="LastName" type="text" maxlength="25" required><br/><br/>		
+
+	<!-- Age -->
+	<label>Age:</label><br/>
+	<input name="age" type="number" min="18" max="60"><br/><br/>	
+
+	<!-- Email -->
+	<label>Email:</label><br/>
+	<input name="email" type="email" required><br/><br/>	
+
+	<!-- Channels -->
+	<datalist id="mylist">
+		<option label="google" value="http://google.com">
+		<option label="yahoo" value="http://yahoo.com">
+		<option label="Bing" value="http://bing.com">
+	</datalist>
+
+	<label>How Did you hear about us:</label><br/>
+	<input name="HowDidYouHear" type="url" list="mylist"><br/><br/>	
+
+	<!-- Contact Time -->
+	<label>When would you like us to contact you:</label><br/>
+	<input name="ContactDate" type="date"><br/><br/>	
+
+	<!-- How many products -->
+	<label>How many of our products do you own:</label><br/>
+	<input id="slider" name="sliderValue" type="range" min="1" max="10" value="5"></input>
+
+	<output name="NumberOfProducts" value="5" onforminput="value=sliderValue.value">5</output>
+	<br/><br/>		
+
+	<!-- Submit  -->
+	<button type="submit">Submit</button>	
+
+
+</form> 
+</section>
+
+	
+</body>
+</html>

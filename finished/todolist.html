@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Editable Content</title>
+	<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- to do list -->
+	<header>
+		<h1>To Do List</h1>
+	</header>
+	<section>
+		<ul id="edit" contenteditable="true">
+			<li>Call the PM</li>
+			<li>Send an email to Tommy</li>
+			<li>Coffee break</li>
+		</ul>
+	</section>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+	
+	<script>
+
+	$(function(){
+		var edit = document.getElementById('edit');
+
+		$(edit).blur(function(){
+			localStorage.setItem('todoData', this.innerHTML);
+		})
+
+		//when the page load
+		if (localStorage.getItem('todoData')) {
+			edit.innerHTML = localStorage.getItem('todoData');
+		}
+	})
+
+	</script>
+</body>
+</html>
